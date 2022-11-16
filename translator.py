@@ -12,12 +12,12 @@ translatoredString = ''
 def takeInput():
     global translatorTimes
     translatorTimes = int(input("how many times would you like to translate this text?"))
-    print(translatorTimes)
+    # print(translatorTimes)
 
 def takeString():
     global stringToTranslate
     stringToTranslate =input("What would you like to translate?")
-    print(stringToTranslate)
+    # print(stringToTranslate)
 
 # print(languageChoice)
 def languageChooser():
@@ -28,15 +28,15 @@ def languageChooser():
 
 def letChaosReign():
     global stringToTranslate
-    print(translatorTimes)
+    # print(translatorTimes)
     i=0
     while i < translatorTimes:
         languageChooser()
         translatedString = translator.translate(stringToTranslate, dest=languageChosen)
         stringToTranslate = translatedString.text
-        print(languageChosen)
-        print(translatedString.text)
-        print(i)
+        # print(languageChosen)
+        # print(translatedString.text)
+        # print(i)
         i += 1
     else:    
         backToEnglish()
