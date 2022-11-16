@@ -1,5 +1,6 @@
 from googletrans import Translator
 import random
+import time
 from googletrans import LANGUAGES
 translator = Translator()
 languageChoice = list(LANGUAGES)
@@ -37,6 +38,7 @@ def letChaosReign():
         languageChooser()
         translatedString = translator.translate(stringToTranslate, dest=languageChosen)
         stringToTranslate = translatedString.text
+        time.sleep(.5)
         print(languageChosen)
         print(translatedString.text)
         print(i)
