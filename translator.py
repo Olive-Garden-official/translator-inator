@@ -14,7 +14,7 @@ def takeInput():
     translatorTimes = int(input("how many times would you like to translate this text?"))+1
     # print(translatorTimes)
     if translatorTimes > 51:
-        print('Error! Must not exceed 100 translations to appease our Google overlords')
+        print('Error! Must not exceed 50 translations to appease our Google overlords')
         takeInput()
 
 def takeString():
