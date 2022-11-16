@@ -11,8 +11,11 @@ translatoredString = ''
 
 def takeInput():
     global translatorTimes
-    translatorTimes = int(input("how many times would you like to translate this text?"))
+    translatorTimes = int(input("how many times would you like to translate this text?"))+1
     # print(translatorTimes)
+    if translatorTimes > 51:
+        print('Error! Must not exceed 100 translations to appease our Google overlords')
+        takeInput()
 
 def takeString():
     global stringToTranslate
@@ -34,9 +37,9 @@ def letChaosReign():
         languageChooser()
         translatedString = translator.translate(stringToTranslate, dest=languageChosen)
         stringToTranslate = translatedString.text
-        # print(languageChosen)
-        # print(translatedString.text)
-        # print(i)
+        print(languageChosen)
+        print(translatedString.text)
+        print(i)
         i += 1
     else:    
         backToEnglish()
