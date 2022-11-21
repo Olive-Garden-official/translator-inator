@@ -3,6 +3,7 @@ Now with less ghosts!
 ## About
 Just a simple Python program to translate input text through the GoogleTrans module as many times as you want, often generating gibberish.
 
+Do you think this tool makes the creator of the GoogleTrans module lay awake at night, questioning everything? Or maybe just pisses them off because I keep sending calls to their tool over and over and over with the express purpose of generating nothingness? The world may never know.
 ## Use
 ### Ensure you have the googletrans module installed
     Assuming you have Python installed and properly configured, Run the following pip commands to ensure you have the proper modules installed:
