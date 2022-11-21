@@ -1,3 +1,5 @@
+# Translator-inator V0.1.2
+# Created by Cybork
 from googletrans import Translator
 import random
 import time
@@ -5,6 +7,7 @@ from prompter import yesno
 from googletrans import LANGUAGES
 translator = Translator()
 languageList = list(LANGUAGES)
+startingLanguage = ''
 translateAmount = 0
 stringToTranslate = ''
 backToEnglish =''
@@ -25,7 +28,13 @@ def takeInput():
 def takeString():
     global stringToTranslate
     stringToTranslate =input('What would you like to translate? ')
+    detectStartLanguage()
     # print(stringToTranslate)
+
+def detectStartLanguage():
+    global startingLanguage
+    startingLanguage = translator.detect(stringToTranslate).lang
+
 
 
 # Chooses a language at random, ensures it's not being translated back to english prematurely
@@ -67,18 +76,18 @@ def letChaosReign():
     else:    
         print('success!')
         time.sleep(2)
-        backToEnglish()
+        backToStart()
 
 
 # This function translate the very scrambled text back to english and serves it to the user
-def backToEnglish():
-    print('Translating back to english')
+def backToStart():
+    print('Translating back to original language')
     time.sleep(1)
     for x in range(6):
       print(".  ", end="", flush=True)
       time.sleep(1)
     print('')
-    translatoredString = translator.translate(stringToTranslate, dest='en')
+    translatoredString = translator.translate(stringToTranslate, dest=startingLanguage)
     print('Results: ')
     print(translatoredString.text)
 

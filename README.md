@@ -1,4 +1,5 @@
-# translator-inator
+# translator-inator V 0.1.2
+Now with less ghosts!
 ## About
 Just a simple Python program to translate input text through the GoogleTrans module as many times as you want, often generating gibberish.
 
